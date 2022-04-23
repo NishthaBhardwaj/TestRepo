@@ -1,0 +1,52 @@
+<testsuite failures="2" name="com/api/automation/postrequest/fileupload/fileUpload.feature" skipped="0" tests="2" time="0.336373">
+  <testcase classname="com.api.automation.postrequest.fileupload.fileUpload" name="To upload the bad file in the application" time="0.11488">
+    <failure message="fileUpload.feature:10 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)">Given url 'http://localhost:8080' ......................................... passed
+* def taskID = '' ......................................................... passed
+Given path '/upload-file' ................................................. passed
+And multipart file file = { read:'uploadBadFile.txt', filename:'uploadBadFile.txt', Content-Type:'text/plain' } . passed
+When method post .......................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: fileUpload.feature:10 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method post (fileUpload.feature:10)
+
+Then status 400 ........................................................... skipped
+And match response.message == '#notnull' .................................. skipped
+And match response.details == '#notnull' .................................. skipped
+And match responseHeaders contains { 'Location': '#notpresent' } .......... skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.fileupload.fileUpload" name="To upload the good file in the application calling by another file" time="0.221493">
+    <failure message="fileUpload.feature:22 - &#10;submitFile.feature:10 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)">Given url 'http://localhost:8080' ......................................... passed
+* def taskID = '' ......................................................... passed
+Given path '/upload-file' ................................................. passed
+And multipart file file = { read:'uploadBadFile.txt', filename:'uploadBadFile.txt', Content-Type:'text/plain' } . passed
+When method post .......................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: fileUpload.feature:10 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method post (fileUpload.feature:10)
+
+Then status 400 ........................................................... skipped
+And match response.message == '#notnull' .................................. skipped
+And match response.details == '#notnull' .................................. skipped
+And match responseHeaders contains { 'Location': '#notpresent' } .......... skipped
+Given url 'http://localhost:8080' ......................................... passed
+* def taskID = '' ......................................................... passed
+* def postRequest = call read("../../submitFile.feature") {_url:'http://localhost:8080'} . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: fileUpload.feature:22 - 
+submitFile.feature:10 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.* def postRequest = call read("../../submitFile.feature") {_url:'http://localhost:8080'} (fileUpload.feature:22)
+
+And print postRequest.id .................................................. skipped
+* def resourceName = "/phone-numbers/" + postRequest.id ................... skipped
+Given path resourceName ................................................... skipped
+When method get ........................................................... skipped
+Then status 200 ........................................................... skipped
+And match response.taskID == postRequest.id ............................... skipped</failure>
+  </testcase>
+</testsuite>

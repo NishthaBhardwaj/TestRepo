@@ -1,0 +1,41 @@
+<testsuite failures="2" name="com/api/automation/getrequest/getRequest.feature" skipped="0" tests="2" time="1.037132">
+  <testcase classname="com.api.automation.getrequest.getRequest" name="To get the data for specific Task ID from application in JSON format" time="0.520421">
+    <failure message="getRequest.feature:12 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)">Given url 'http://localhost:8080' ......................................... passed
+And print "===========This the Background keyword =============" .......... passed
+Given path 'phone-numbers/T1464318363' .................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get #send the get request ..................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: getRequest.feature:12 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method get #send the get request (getRequest.feature:12)
+
+Then status 200 ........................................................... skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.getRequest" name="To get all the data from application in JSON format using path variable" time="0.516712">
+    <failure message="getRequest.feature:17 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)">Given url 'http://localhost:8080' ......................................... passed
+And print "===========This the Background keyword =============" .......... passed
+Given path 'phone-numbers/T1464318363' .................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get #send the get request ..................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: getRequest.feature:12 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method get #send the get request (getRequest.feature:12)
+
+Then status 200 ........................................................... skipped
+Given url 'http://localhost:8080' ......................................... passed
+And print "===========This the Background keyword =============" .......... passed
+And path '/phone-numbers/tasks' ........................................... passed
+When method get # send the get request .................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: getRequest.feature:17 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method get # send the get request (getRequest.feature:17)
+
+Then status 200 ........................................................... skipped</failure>
+  </testcase>
+</testsuite>

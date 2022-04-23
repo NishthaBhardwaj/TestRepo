@@ -1,0 +1,42 @@
+<testsuite failures="2" name="com/api/automation/getrequest/validataJSONArray.feature" skipped="0" tests="2" time="1.026859">
+  <testcase classname="com.api.automation.getrequest.validataJSONArray" name="To get the data in JSON format" time="0.516138">
+    <failure message="validataJSONArray.feature:10 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)">Given url 'http://localhost:8080' ......................................... passed
+Given path "/phone-numbers/tasks" ......................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: validataJSONArray.feature:10 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method get (validataJSONArray.feature:10)
+
+Then status 200 ........................................................... skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.validataJSONArray" name="To get the data in JSON format and validate using fuzzy matcher" time="0.510721">
+    <failure message="validataJSONArray.feature:17 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)">Given url 'http://localhost:8080' ......................................... passed
+Given path "/phone-numbers/tasks" ......................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: validataJSONArray.feature:10 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method get (validataJSONArray.feature:10)
+
+Then status 200 ........................................................... skipped
+Given url 'http://localhost:8080' ......................................... passed
+Given path "/phone-numbers/tasks" ......................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: validataJSONArray.feature:17 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method get (validataJSONArray.feature:17)
+
+Then status 200 ........................................................... skipped
+And match response.[0].jobId == '#present' ................................ skipped
+And match response.[0].taskId == '#notnull' ............................... skipped
+And match response.[0].jobTitle == '#string' .............................. skipped</failure>
+  </testcase>
+</testsuite>

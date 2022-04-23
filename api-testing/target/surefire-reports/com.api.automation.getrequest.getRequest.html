@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+      
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            
+        <meta charset="utf-8">
+            
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+            
+        <link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+            
+        <link href="res/karate-report.css" rel="stylesheet" type="text/css">
+            
+        <link href="favicon.ico" rel="shortcut icon">
+            <script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+        <title>com.api.automation.getrequest.getRequest</title>
+          
+    </head>
+      
+    <body>
+            
+        <div id="root-container">
+                  
+            <div id="leftnav">
+                        
+                <div class="nav-logo">
+                              <a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+                    <div class="nav-count">
+                                    
+                        <div class="bg-success" id="nav-pass">0</div>
+                                    
+                        <div class="bg-danger" id="nav-fail">2</div>
+                                  
+                    </div>
+                            
+                </div>
+                        
+                <div id="nav-type">Scenarios</div>
+                         
+        
+                <div id="nav-date">2022-04-23 01:32:24 PM</div>
+                        
+      
+                <div class="nav-container">
+                    <div class="nav-item failed">
+                        <a href="#[1:8]">[1:8] To get the data for specific Task ID from application in JSON format </a>
+                    </div>
+                    <div class="nav-item failed">
+                        <a href="#[2:15]">[2:15] To get all the data from application in JSON format using path variable </a>
+                    </div>
+                </div>
+            </div>
+                  
+            <div id="content">
+                      
+                <div class="page-heading alert alert-primary">
+                    <a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">com/api/automation/getrequest/getRequest.feature</span><span class="feature-description">To test the get end point of the application | To test different get end point with different data formate supported by the application</span>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[1:8]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [1:8]</span><span class="scenario-name">To get the data for specific Task ID from application in JSON format </span>
+                        </div>
+                        <div class="scenario-time failed">ms: 520</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[1:8]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[1:8]bg">
+                        <div class="step-container" id="1">
+                            <div class="step-ref bg-step">1</div>
+                            <div class="step-cell passed">Given url 'http://localhost:8080'</div>
+                        </div>
+                        <div class="time-cell passed">67</div>
+                    </div>
+                    <div class="preformatted" data-parent="1">13:32:23.322 karate.env system property was:</div>
+                    <div class="step-row" data-parent="[1:8]bg">
+                        <div class="step-container" id="2">
+                            <div class="step-ref bg-step">2</div>
+                            <div class="step-cell passed">And print "===========This the Background keyword ============="</div>
+                        </div>
+                        <div class="time-cell passed">14</div>
+                    </div>
+                    <div class="preformatted" data-parent="2">13:32:23.612 [print] ===========This the Background keyword =============</div>
+                    <div class="step-row">
+                        <div class="step-container" id="3">
+                            <div class="step-ref passed">3</div>
+                            <div class="step-cell passed">Given path 'phone-numbers/T1464318363'</div>
+                        </div>
+                        <div class="time-cell passed">19</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="4">
+                            <div class="step-ref passed">4</div>
+                            <div class="step-cell passed">And header Accept = 'application/json'</div>
+                        </div>
+                        <div class="time-cell passed">20</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container">
+                            <div class="step-ref failed"></div>
+                            <div class="step-cell comment">#Base path + context path</div>
+                        </div>
+                        <div class="time-cell comment"></div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="5">
+                            <div class="step-ref failed">5</div>
+                            <div class="step-cell failed">When method get #send the get request</div>
+                        </div>
+                        <div class="time-cell failed">400</div>
+                    </div>
+                    <div class="preformatted" data-parent="5">13:32:24.034 request:
+1 &gt; GET http://localhost:8080/phone-numbers/T1464318363
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:8080
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+13:32:24.057 org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), http call failed after 22 milliseconds for URL: http://localhost:8080/phone-numbers/T1464318363
+13:32:24.058 http request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+getRequest.feature:12 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)</div>
+                    <div class="step-row">
+                        <div class="step-container" id="6">
+                            <div class="step-ref skipped">6</div>
+                            <div class="step-cell skipped">Then status 200</div>
+                        </div>
+                        <div class="time-cell skipped">0</div>
+                    </div>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[2:15]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [2:15]</span><span class="scenario-name">To get all the data from application in JSON format using path variable </span>
+                        </div>
+                        <div class="scenario-time failed">ms: 517</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[2:15]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[2:15]bg">
+                        <div class="step-container" id="7">
+                            <div class="step-ref bg-step">7</div>
+                            <div class="step-cell passed">Given url 'http://localhost:8080'</div>
+                        </div>
+                        <div class="time-cell passed">64</div>
+                    </div>
+                    <div class="preformatted" data-parent="7">13:32:23.337 karate.env system property was:</div>
+                    <div class="step-row" data-parent="[2:15]bg">
+                        <div class="step-container" id="8">
+                            <div class="step-ref bg-step">8</div>
+                            <div class="step-cell passed">And print "===========This the Background keyword ============="</div>
+                        </div>
+                        <div class="time-cell passed">14</div>
+                    </div>
+                    <div class="preformatted" data-parent="8">13:32:23.612 [print] ===========This the Background keyword =============</div>
+                    <div class="step-row">
+                        <div class="step-container" id="9">
+                            <div class="step-ref passed">9</div>
+                            <div class="step-cell passed">And path '/phone-numbers/tasks'</div>
+                        </div>
+                        <div class="time-cell passed">33</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="10">
+                            <div class="step-ref failed">10</div>
+                            <div class="step-cell failed">When method get # send the get request</div>
+                        </div>
+                        <div class="time-cell failed">405</div>
+                    </div>
+                    <div class="preformatted" data-parent="10">13:32:24.034 request:
+1 &gt; GET http://localhost:8080/phone-numbers/tasks
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:8080
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+13:32:24.057 org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), http call failed after 22 milliseconds for URL: http://localhost:8080/phone-numbers/tasks
+13:32:24.057 http request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+getRequest.feature:17 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)</div>
+                    <div class="step-row">
+                        <div class="step-container" id="11">
+                            <div class="step-ref skipped">11</div>
+                            <div class="step-cell skipped">Then status 200</div>
+                        </div>
+                        <div class="time-cell skipped">0</div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+           
+  
+    </body>
+    
+</html>

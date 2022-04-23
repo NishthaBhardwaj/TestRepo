@@ -1,0 +1,52 @@
+13:32:23.381 karate.env system property was:  
+13:32:23.665 karate.env system property was:  
+13:32:24.034 request:
+1 > GET http://localhost:8080/phone-numbers/tasks
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+13:32:24.057 org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), http call failed after 22 milliseconds for URL: http://localhost:8080/phone-numbers/tasks
+13:32:24.057 http request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+13:32:24.161 karate.env system property was:  
+13:32:24.197 request:
+1 > GET http://localhost:8080/phone-numbers/tasks
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+13:32:24.202 org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), http call failed after 4 milliseconds for URL: http://localhost:8080/phone-numbers/tasks
+13:32:24.203 http request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+13:32:24.311 karate.env system property was:  
+13:32:24.328 request:
+1 > GET http://localhost:8080/phone-numbers/tasks
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+13:32:24.331 org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), http call failed after 3 milliseconds for URL: http://localhost:8080/phone-numbers/tasks
+13:32:24.331 http request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+13:32:24.432 karate.env system property was:  
+13:32:24.622 request:
+1 > POST http://localhost:8080/users
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 71
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+{"name":0.3410028355016279,"birthDate":"2022-04-19T20:00:54.343+00:00"}
+
+13:32:24.623 org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), http call failed after 1 milliseconds for URL: http://localhost:8080/users
+13:32:24.623 http request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)

@@ -1,0 +1,14 @@
+<testsuite failures="1" name="com/api/automation/getrequest/getRequest1.feature" skipped="0" tests="1" time="0">
+  <testcase classname="com.api.automation.getrequest.getRequest1" name="To test the get end point with JSON data" time="0">
+    <failure message="getRequest1.feature:4 - no step-definition method match found for: the application url 'www.google.com'">Given the application url 'www.google.com' ................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: getRequest1.feature:4 - no step-definition method match found for: the application url 'www.google.com'
+	at ✽.Given the application url 'www.google.com' (getRequest1.feature:4)
+
+And the context path is '/getData' ........................................ skipped
+When I send the get request ............................................... skipped
+Then status code should be 200 ............................................ skipped
+And the response format should be in JSON ................................. skipped</failure>
+  </testcase>
+</testsuite>

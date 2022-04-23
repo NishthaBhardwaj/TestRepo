@@ -1,0 +1,58 @@
+13:32:23.322 karate.env system property was:  
+13:32:23.612 [print] ===========This the Background keyword =============
+13:32:24.034 request:
+1 > GET http://localhost:8080/phone-numbers/T1464318363
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+13:32:24.057 org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), http call failed after 22 milliseconds for URL: http://localhost:8080/phone-numbers/T1464318363
+13:32:24.058 http request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+13:32:24.156 karate.env system property was:  
+13:32:24.254 [print] Previous Secario ===>  20
+13:32:24.289 [print] Background variable ===>  Phone
+13:32:24.346 karate.env system property was:  
+13:32:24.577 request:
+1 > POST http://localhost:8080/upload-file
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 1145789
+1 > Content-Type: multipart/form-data; boundary=LIYAcA45N8HO_dN-ou6dxIaC7uPCzFAqkCYfN8e
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+13:32:24.581 org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), http call failed after 3 milliseconds for URL: http://localhost:8080/upload-file
+13:32:24.581 http request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+13:32:24.582 feature call failed: classpath:com/api/automation/submitFile.feature
+arg: {"_url":"http://localhost:8080"}
+submitFile.feature:10 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+"status":404}
+01:22:36.761 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+01:22:36.770 request:
+1 > GET http://localhost:8080/phone-numbers/tasks
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+01:22:36.809 response time in milliseconds: 29.42
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Fri, 22 Apr 2022 19:52:36 GMT
+1 < Expires: 0
+1 < Keep-Alive: timeout=60
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+["T1007682405"]
+

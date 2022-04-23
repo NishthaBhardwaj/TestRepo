@@ -1,0 +1,94 @@
+<testsuite failures="2" name="com/api/automation/getrequest/variable.feature" skipped="0" tests="4" time="0.561983">
+  <testcase classname="com.api.automation.getrequest.variable" name="To create  a variable" time="0.251603">
+    <system-out>* def app_name = "Phone" .................................................. passed
+Given def var_int = 10 .................................................... passed
+And def var_string = "Karate" ............................................. passed
+And print "String variable ===&gt; " ,var_string ............................. passed
+And print "Int variable ===&gt; " ,var_int ................................... passed
+* def var_int_2 = var_int + 10 ............................................ passed
+And print "Int variable ===&gt; " ,var_int_2 ................................. passed
+And print "Background variable ===&gt; " ,app_name ........................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.variable" name="Access the variable" time="0.116584">
+    <system-out>* def app_name = "Phone" .................................................. passed
+Given def var_int = 10 .................................................... passed
+And def var_string = "Karate" ............................................. passed
+And print "String variable ===&gt; " ,var_string ............................. passed
+And print "Int variable ===&gt; " ,var_int ................................... passed
+* def var_int_2 = var_int + 10 ............................................ passed
+And print "Int variable ===&gt; " ,var_int_2 ................................. passed
+And print "Background variable ===&gt; " ,app_name ........................... passed
+* def app_name = "Phone" .................................................. passed
+* def var_int_2 = 20 ...................................................... passed
+Given print "Previous Secario ===&gt; " ,var_int_2 ........................... passed
+And print "Background variable ===&gt; " ,app_name ........................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.variable" name="To upload the good file in the application" time="0.043025">
+    <failure message="variable.feature:26 - no step-definition method match found for: fileLocation = '../data/phone_numbers_3.txt'">* def app_name = "Phone" .................................................. passed
+Given def var_int = 10 .................................................... passed
+And def var_string = "Karate" ............................................. passed
+And print "String variable ===&gt; " ,var_string ............................. passed
+And print "Int variable ===&gt; " ,var_int ................................... passed
+* def var_int_2 = var_int + 10 ............................................ passed
+And print "Int variable ===&gt; " ,var_int_2 ................................. passed
+And print "Background variable ===&gt; " ,app_name ........................... passed
+* def app_name = "Phone" .................................................. passed
+* def var_int_2 = 20 ...................................................... passed
+Given print "Previous Secario ===&gt; " ,var_int_2 ........................... passed
+And print "Background variable ===&gt; " ,app_name ........................... passed
+* def app_name = "Phone" .................................................. passed
+Given path '/upload-file' ................................................. passed
+* fileLocation = '../data/phone_numbers_3.txt' ............................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: variable.feature:26 - no step-definition method match found for: fileLocation = '../data/phone_numbers_3.txt'
+	at ✽.* fileLocation = '../data/phone_numbers_3.txt' (variable.feature:26)
+
+And multipart file file = { read:'#(fileLocation)', filename:'phone_numbers_3.txt', Content-Type:'text/plain' } . skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+And match responseHeaders contains { 'Location': '#present' } ............. skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.variable" name="To upload the good file in the application" time="0.150771">
+    <failure message="variable.feature:42 - url not set, please refer to the keyword documentation for 'url'">* def app_name = "Phone" .................................................. passed
+Given def var_int = 10 .................................................... passed
+And def var_string = "Karate" ............................................. passed
+And print "String variable ===&gt; " ,var_string ............................. passed
+And print "Int variable ===&gt; " ,var_int ................................... passed
+* def var_int_2 = var_int + 10 ............................................ passed
+And print "Int variable ===&gt; " ,var_int_2 ................................. passed
+And print "Background variable ===&gt; " ,app_name ........................... passed
+* def app_name = "Phone" .................................................. passed
+* def var_int_2 = 20 ...................................................... passed
+Given print "Previous Secario ===&gt; " ,var_int_2 ........................... passed
+And print "Background variable ===&gt; " ,app_name ........................... passed
+* def app_name = "Phone" .................................................. passed
+Given path '/upload-file' ................................................. passed
+* fileLocation = '../data/phone_numbers_3.txt' ............................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: variable.feature:26 - no step-definition method match found for: fileLocation = '../data/phone_numbers_3.txt'
+	at ✽.* fileLocation = '../data/phone_numbers_3.txt' (variable.feature:26)
+
+And multipart file file = { read:'#(fileLocation)', filename:'phone_numbers_3.txt', Content-Type:'text/plain' } . skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+And match responseHeaders contains { 'Location': '#present' } ............. skipped
+* def app_name = "Phone" .................................................. passed
+Given path '/upload-file' ................................................. passed
+* def fileLocation = '../data/phone_numbers_3.txt' ........................ passed
+* def taskIdFromLocation = function(str) {return str.split('/').pop();} ... passed
+And multipart file file = { read:'#(fileLocation)', filename:'phone_numbers_3.txt', Content-Type:'text/plain' } . passed
+When method post .......................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: variable.feature:42 - url not set, please refer to the keyword documentation for 'url'
+	at ✽.When method post (variable.feature:42)
+
+Then status 201 ........................................................... skipped
+And print responseHeaders.Location ........................................ skipped
+And print taskIdFromLocation(responseHeaders.Location[0]) ................. skipped
+And print task ............................................................ skipped
+And match responseHeaders contains { 'Location': '#present' } ............. skipped</failure>
+  </testcase>
+</testsuite>

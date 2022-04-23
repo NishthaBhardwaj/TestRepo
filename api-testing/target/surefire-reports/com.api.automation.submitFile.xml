@@ -1,0 +1,20 @@
+<testsuite failures="1" name="com/api/automation/submitFile.feature" skipped="0" tests="1" time="0.033558">
+  <testcase classname="com.api.automation.submitFile" name="To upload file" time="0.033558">
+    <failure message="submitFile.feature:9 - could not find or read file: ../data/phone_numbers_3.txt">Given url _url ............................................................ passed
+And path '/upload-file' ................................................... passed
+* def fileLocation = '../data/phone_numbers_3.txt' ........................ passed
+* def taskIdFromLocation = function(str) {return str.split('/').pop();} ... passed
+And multipart file file = { read:'#(fileLocation)', filename:'phone_numbers_3.txt', Content-Type:'text/plain' } . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: submitFile.feature:9 - could not find or read file: ../data/phone_numbers_3.txt
+	at ✽.And multipart file file = { read:'#(fileLocation)', filename:'phone_numbers_3.txt', Content-Type:'text/plain' } (submitFile.feature:9)
+
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+And print responseHeaders.Location ........................................ skipped
+* def id =  taskIdFromLocation(responseHeaders.Location[0]) ............... skipped
+And print id .............................................................. skipped
+And match responseHeaders contains { 'Location': '#present' } ............. skipped</failure>
+  </testcase>
+</testsuite>

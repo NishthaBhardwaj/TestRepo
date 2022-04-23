@@ -1,0 +1,7 @@
+<testsuite failures="0" name="com/api/automation/config/getGlobalConfig.feature" skipped="0" tests="1" time="0.050446">
+  <testcase classname="com.api.automation.config.getGlobalConfig" name="To get the value of myVarName" time="0.050446">
+    <system-out>* def localMyVarName = myVarName .......................................... passed
+Given print "Background Variable value ==&gt; ", localMyVarName .............. passed
+Given print "Scenario Variable value ==&gt; ", myVarName ..................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"ForkJoinPool-1-worker-3"},{"id":2,"content":"ForkJoinPool-1-worker-7"},{"id":3,"content":"ForkJoinPool-1-worker-5"},{"id":4,"content":"ForkJoinPool-1-worker-11"},{"id":5,"content":"ForkJoinPool-1-worker-9"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"getRequest[1:8]","start":2410,"end":2969,"title":"getRequest[1:8] 05:30:02.410-05:30:02.969 To get the data for specific Task ID from application in JSON format"},{"id":2,"group":2,"content":"getRequest[2:15]","start":2409,"end":2969,"title":"getRequest[2:15] 05:30:02.409-05:30:02.969 To get all the data from application in JSON format using path variable"},{"id":3,"group":3,"content":"responseMatcher[1:7]","start":2578,"end":2969,"title":"responseMatcher[1:7] 05:30:02.578-05:30:02.969 To get the data in JSON format"},{"id":4,"group":3,"content":"responseMatcher[2:19]","start":3080,"end":3114,"title":"responseMatcher[2:19] 05:30:03.080-05:30:03.114 To get the data in JSON format and validate using negate condition"},{"id":5,"group":3,"content":"responseMatcher[3:31]","start":3225,"end":3244,"title":"responseMatcher[3:31] 05:30:03.225-05:30:03.244 To get the data in JSON format and validate the specific property"},{"id":6,"group":4,"content":"validataJSONArray[1:7]","start":2409,"end":2969,"title":"validataJSONArray[1:7] 05:30:02.409-05:30:02.969 To get the data in JSON format"},{"id":7,"group":5,"content":"validataJSONArray[2:14]","start":2410,"end":2969,"title":"validataJSONArray[2:14] 05:30:02.410-05:30:02.969 To get the data in JSON format and validate using fuzzy matcher"},{"id":8,"group":5,"content":"variable[1:7]","start":3080,"end":3338,"title":"variable[1:7] 05:30:03.080-05:30:03.338 To create  a variable"},{"id":9,"group":1,"content":"variable[2:20]","start":3081,"end":3201,"title":"variable[2:20] 05:30:03.081-05:30:03.201 Access the variable"},{"id":10,"group":2,"content":"variable[3:24]","start":3080,"end":3128,"title":"variable[3:24] 05:30:03.080-05:30:03.128 To upload the good file in the application"},{"id":11,"group":2,"content":"variable[4:35]","start":3243,"end":3397,"title":"variable[4:35] 05:30:03.243-05:30:03.397 To upload the good file in the application"},{"id":12,"group":3,"content":"getRequest1[1:3]","start":2414,"end":2448,"title":"getRequest1[1:3] 05:30:02.414-05:30:02.448 To test the get end point with JSON data"},{"id":13,"group":4,"content":"getGlobalConfig[1:6]","start":3080,"end":3136,"title":"getGlobalConfig[1:6] 05:30:03.080-05:30:03.136 To get the value of myVarName"},{"id":14,"group":3,"content":"createUser[1:5]","start":3347,"end":3534,"title":"createUser[1:5] 05:30:03.347-05:30:03.534 To create the User in JSON Format"},{"id":15,"group":5,"content":"createUser[2:14]","start":3414,"end":3485,"title":"createUser[2:14] 05:30:03.414-05:30:03.485 To create the User in JSON Format from file"},{"id":16,"group":4,"content":"fileUpload[1:6]","start":3252,"end":3372,"title":"fileUpload[1:6] 05:30:03.252-05:30:03.372 To upload the bad file in the application"},{"id":17,"group":1,"content":"fileUpload[2:20]","start":3268,"end":3493,"title":"fileUpload[2:20] 05:30:03.268-05:30:03.493 To upload the good file in the application calling by another file"},{"id":18,"group":4,"content":"submitFile[1:2]","start":3414,"end":3449,"title":"submitFile[1:2] 05:30:03.414-05:30:03.449 To upload file"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

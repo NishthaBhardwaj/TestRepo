@@ -1,0 +1,86 @@
+<testsuite failures="3" name="com/api/automation/getrequest/responseMatcher.feature" skipped="0" tests="3" time="0.436716">
+  <testcase classname="com.api.automation.getrequest.responseMatcher" name="To get the data in JSON format" time="0.390055">
+    <failure message="responseMatcher.feature:10 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)">Given url 'http://localhost:8080' ......................................... passed
+Given path "/phone-numbers/tasks" ......................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: responseMatcher.feature:10 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method get (responseMatcher.feature:10)
+
+Then status 200 ........................................................... skipped
+And path response ......................................................... skipped
+And match response == ..................................................... skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.responseMatcher" name="To get the data in JSON format and validate using negate condition" time="0.029771">
+    <failure message="responseMatcher.feature:22 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)">Given url 'http://localhost:8080' ......................................... passed
+Given path "/phone-numbers/tasks" ......................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: responseMatcher.feature:10 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method get (responseMatcher.feature:10)
+
+Then status 200 ........................................................... skipped
+And path response ......................................................... skipped
+And match response == ..................................................... skipped
+Given url 'http://localhost:8080' ......................................... passed
+Given path "/phone-numbers/tasks" ......................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: responseMatcher.feature:22 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method get (responseMatcher.feature:22)
+
+Then status 200 ........................................................... skipped
+And path response ......................................................... skipped
+And match response != ..................................................... skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.responseMatcher" name="To get the data in JSON format and validate the specific property" time="0.01689">
+    <failure message="responseMatcher.feature:34 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)">Given url 'http://localhost:8080' ......................................... passed
+Given path "/phone-numbers/tasks" ......................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: responseMatcher.feature:10 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method get (responseMatcher.feature:10)
+
+Then status 200 ........................................................... skipped
+And path response ......................................................... skipped
+And match response == ..................................................... skipped
+Given url 'http://localhost:8080' ......................................... passed
+Given path "/phone-numbers/tasks" ......................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: responseMatcher.feature:22 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method get (responseMatcher.feature:22)
+
+Then status 200 ........................................................... skipped
+And path response ......................................................... skipped
+And match response != ..................................................... skipped
+Given url 'http://localhost:8080' ......................................... passed
+Given path "/phone-numbers/tasks" ......................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: responseMatcher.feature:34 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method get (responseMatcher.feature:34)
+
+Then status 200 ........................................................... skipped
+And path response ......................................................... skipped
+And match header Content-Type == 'application/json' ....................... skipped</failure>
+  </testcase>
+</testsuite>

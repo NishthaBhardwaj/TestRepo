@@ -1,0 +1,48 @@
+<testsuite failures="2" name="com/api/automation/postrequest/createUser.feature" skipped="0" tests="2" time="0.247776">
+  <testcase classname="com.api.automation.postrequest.createUser" name="To create the User in JSON Format" time="0.183648">
+    <failure message="createUser.feature:10 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)">Given url "http://localhost:8080" ......................................... passed
+Given path "/users" ....................................................... passed
+* def name = function() {return Math.random();} ........................... passed
+And request { "name": "#(name())", "birthDate": "2022-04-19T20:00:54.343+00:00" } . passed
+And headers {Accept: 'application/json', Content-Type: 'application/json'} . passed
+When method post .......................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createUser.feature:10 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method post (createUser.feature:10)
+
+And status 201 ............................................................ skipped
+And print header .......................................................... skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.createUser" name="To create the User in JSON Format from file" time="0.064128">
+    <failure message="createUser.feature:19 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)">Given url "http://localhost:8080" ......................................... passed
+Given path "/users" ....................................................... passed
+* def name = function() {return Math.random();} ........................... passed
+And request { "name": "#(name())", "birthDate": "2022-04-19T20:00:54.343+00:00" } . passed
+And headers {Accept: 'application/json', Content-Type: 'application/json'} . passed
+When method post .......................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createUser.feature:10 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method post (createUser.feature:10)
+
+And status 201 ............................................................ skipped
+And print header .......................................................... skipped
+Given url "http://localhost:8080" ......................................... passed
+Given path "/users" ....................................................... passed
+* def body = read("data/User.json") ....................................... passed
+And request body .......................................................... passed
+And headers {Accept: 'application/json', Content-Type: 'application/json'} . passed
+When method post .......................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createUser.feature:19 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+	at ✽.When method post (createUser.feature:19)
+
+And status 201 ............................................................ skipped
+And print header .......................................................... skipped</failure>
+  </testcase>
+</testsuite>
